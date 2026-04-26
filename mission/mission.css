@@ -1,0 +1,45 @@
+body{
+    font-size: 20px;
+}
+#content {
+    max-width: 60%;
+    border: 1px solid darkgray;
+    margin: 40px auto;
+    padding: 50px;
+    padding-bottom: 20px;
+}
+h1, #subtitle{
+    text-align: center;
+}
+h1{
+    font-family: 'Times New Roman';
+    letter-spacing: 2px;
+}
+#subtitle{
+    color: #035f9c;
+    letter-spacing: 2px;
+}
+hr {
+    margin-top: -20px;
+    width: 68%;
+}
+#mission{
+    line-height: 1.5em;
+    margin: 0 auto;
+    width: 68%;
+    gap: 20px;
+}
+#italics{
+    font-style: italic;
+}
+#list{
+    line-height: 40px;
+}
+#img {
+    margin-top: 50px;
+}
+#byuiLogo {
+    width: 25%;
+    display: block;
+    margin: 20px auto;
+}
