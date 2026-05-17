@@ -15,9 +15,20 @@ h1 {
 nav {
     padding-bottom: 0.5rem;
 }
+.hide {
+    display: none;
+}
+.menu {
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+}
 nav a {
     color: white;
-    display: none;
+    display: block;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
 }
 nav {
     align-items: center;
@@ -31,8 +42,8 @@ nav {
 }
 main {
     background-color: lightgray;
-padding-left: 10%;
-padding-right: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 h2 {
     padding-top: 1rem;
@@ -40,47 +51,94 @@ h2 {
     text-align: center;
     font-size: 1.6em;
 }  
-#images {
+.images {
     display: grid;
     grid-template-columns: 1fr;
 }
-.pic {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-img {
+.images img {
     object-fit: cover;
     object-position: center;
-    margin: 1rem;
+    margin: 1rem auto;
     border: 4px solid white;
     max-width: 12rem;
     aspect-ratio: 1/1;
     box-shadow: 2px 2px 5px black;
 }
 
+/* img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 5px 5px 15px black;
+    display: block;
+    margin: 0 auto;
+} */
+
+/* modal */
+
+dialog img {
+    width: 90%;
+    display: block;
+    margin: 20vh auto;
+}
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+}
+.close-viewer {
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+}
+
 
 @media screen and (min-width: 700px) {
-    nav a {
-        display: inline;
-    }
-    .menu {
-        display: none;
-    }
-    #images {
+    .images {
     grid-template-columns: 1fr 1fr;
     }
 }
 
 
 @media screen and (min-width: 1000px) {
+    header {
+        padding-bottom: 3vh;
+    }
+    h1 {
+        padding-bottom: 1.5vh;
+    }
+    .hide {
+        display: inline;
+    }
     nav a {
         display: inline;
     }
     .menu {
         display: none;
+        padding-top: 1.5vh;
+        padding-bottom: 1.5vh;
     }
-    #images {
+    .images {
     grid-template-columns: 1fr 1fr 1fr;
+    }
+
+        dialog img {
+        width: 60%;
+        margin: 15vh auto;
+    }
+    .close-viewer {
+        position: absolute;
+        right: 15vh;
+    }
+    .viewer {
+        margin: 50px;
+        padding: 50px;
+    }
+    .viewer img {
+        max-width: 800px;
     }
 }
